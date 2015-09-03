@@ -55,7 +55,7 @@ struct segtree{
 	}
 	//closed range -> closed-open
 	ll querysum(int l, int r){
-		querysum2(1, 0, n, l, r+1);
+		return querysum2(1, 0, n, l, r+1);
 	}
 
 };
