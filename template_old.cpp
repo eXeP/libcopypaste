@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 
-#define i64 long long
-#define u64 unsigned long long
-#define i32 int
-#define u32 unsigned int
+#define ll long long
+#define ull unsigned long long
 
 #define pii pair<int, int>
 #define pll pair<long long, long long>
