@@ -1,4 +1,4 @@
-struct segtree{
+struct sumsegtree{
 	vector<ll> p;
 	vector<ll> ad;
 	ll n = 1;
