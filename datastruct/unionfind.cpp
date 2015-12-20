@@ -12,7 +12,7 @@ struct unionfind{
 
 	int uffind(int x){
 		if(p[x]!=x)
-			p[x] = find(p[x]);
+			p[x] = uffind(p[x]);
 		return p[x];
 	}
 
