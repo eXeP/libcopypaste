@@ -1,6 +1,4 @@
-//range updating segment tree, with closed range queries (easy to change)
-
-struct segtree{
+struct sumsegtree{
 	vector<ll> p;
 	vector<ll> ad;
 	ll n = 1;
@@ -36,27 +34,27 @@ struct segtree{
 			int m = (a+b)/2;
 			add2(idx*2, a, m, l, r, x);
 			add2(idx*2+1, m, b, l, r, x);
+			p[idx] = p[idx*2]+p[idx*2+1]+(b-a)*ad[idx];
 		}
 	}
 	//closed range -> closed-open
 	void add(int l, int r, ll x){
 		add2(1, 0, n, l, r+1, x);
 	}
-	ll querysum2(int idx, int a, int b, int l, int r){
+	ll querysum2(int idx, int a, int b, int l, int r, i64 ad2){
 		if(a >= r || b <= l)
 			return 0;
 		else if(a >= l && b <= r){
-			return p[idx];
+			return p[idx]+(b-a)*ad2;
 		}
 		else{
 			int m = (a+b)/2;
-			return querysum2(idx*2, a, m, l, r)+querysum2(idx*2+1, m, b, l, r)+ad[idx];
+			return querysum2(idx*2, a, m, l, r, ad2+ad[idx])+querysum2(idx*2+1, m, b, l, r, ad2+ad[idx]);
 		}
 	}
 	//closed range -> closed-open
 	ll querysum(int l, int r){
-		return querysum2(1, 0, n, l, r+1);
+		return querysum2(1, 0, n, l, r+1, 0);
 	}
 
 };
-
