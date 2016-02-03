@@ -1,2 +1,2 @@
 # libcopypaste
-Implementations of algorithms and data structures for use in programming competitions
+Implementations of algorithms and data structures for use in programming competitions. Mainly C++.
