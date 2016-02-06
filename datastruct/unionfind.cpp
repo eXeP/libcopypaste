@@ -6,7 +6,7 @@ struct unionfind{
 		r = vector<int>(n+1, 0);
 		s = vector<int>(n+1, 1);
 		for(int i = 0; i <= n; i++){
-			r[i] = i;
+			p[i] = i;
 		}
 	}
 
