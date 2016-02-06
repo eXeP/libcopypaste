@@ -30,7 +30,7 @@ struct unionfind{
 		}
 		else{
 			p[yr] = xr;
-			s[yr]+=s[xr];
+			s[xr]+=s[yr];
 			r[xr]++;
 		}
 	}
