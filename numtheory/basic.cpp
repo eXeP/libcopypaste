@@ -8,6 +8,7 @@ i64 gcd(i64 u, i64 v) {
   return u < 0 ? -u : u; /* abs(u) */
 }
 
+//b^e%m
 i64 powmod(i64 b, i64 e, i64 m){
 	b%=m;
 	i64 re = 1LL;
@@ -18,4 +19,18 @@ i64 powmod(i64 b, i64 e, i64 m){
 		e>>=1;
 	}
 	return re;
+}
+
+//Binomial coefficient
+i64 k[1010101];
+void precbin(){
+	k[0] = 1;
+	for(i64 i = 1; i <= 1000000; ++i){
+		k[i] = (k[i-1]*i)%defmod;
+	}
+}
+i64 ncr(i64 a, i64 b){
+	i64 y = k[a];
+	i64 al = (k[b]*(k[a-b]))%defmod;
+	return (y*powmod(al, defmod-2, defmod))%defmod;
 }
