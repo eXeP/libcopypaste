@@ -9,6 +9,8 @@
 #define pll pair<long long, long long>
 
 #define defmod 1000000007
+
+#define matrixi64(a,b) vector<vector<i64>>(a, vector<i64>(b, 0));
 using namespace std;
 
 
