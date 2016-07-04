@@ -8,6 +8,7 @@
 #define pii pair<int, int>
 #define pll pair<long long, long long>
 
+#define ld long double
 #define defmod 1000000007
 
 #define mati64(a,b) vector<vector<i64>>(a, vector<i64>(b, 0));
