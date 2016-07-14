@@ -26,7 +26,7 @@ vector<vector<i64> > matpow(vector<vector<i64> > A, i64 n){
     }
     return R;
 }
-vector<vector<i64> > printmat(vector<vector<i64> > A){
+void printmat(vector<vector<i64> > A){
     for(int i = 0; i < A.size(); i++){
         for(int j = 0; j < A[0].size(); j++){
             cout << A[i][j] << " ";
