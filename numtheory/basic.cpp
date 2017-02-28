@@ -8,6 +8,19 @@ i64 gcd(i64 u, i64 v) {
   return u < 0 ? -u : u; /* abs(u) */
 }
 
+i64 phi(i64 n){
+	i64 ans = n;
+	for(i64 i = 2; i * i <= n; ++i){
+		if(n%i == 0)
+			ans-=ans/i;
+		while(n%i == 0)
+			n/=i;
+	}
+	if(n > 1)
+		ans-=ans/n;
+	return ans;
+}
+
 //b^e%m
 i64 powmod(i64 b, i64 e, i64 m){
 	b%=m;
